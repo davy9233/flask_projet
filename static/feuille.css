@@ -1,0 +1,35 @@
+h1 {
+    font-size: larger;
+    color: blue;
+}
+
+.rouge {
+    font-size: 200px;
+    color: red;
+}
+
+.rouge_titre {
+    font-size: 20px;
+    color: red;
+}
+
+.bas {
+    position: relative;
+    ;
+    top: 200px;
+}
+
+.droite {
+    left: 10px;
+}
+
+form {
+    background-color: #FAFAFA;
+    padding: 10px;
+    width: auto;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}

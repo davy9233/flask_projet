@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>HomePage</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+    <h1> Bonjour {{ab}} {{prenom}} {{nom}}, votre pseudo est déja utilise </h1>
+    <p>{{msg}}</p>
+    <a class="bas" href="{{ url_for('accueil') }}"> Retourner à la page d'accueil </a>
+</body>
+
+</html>
