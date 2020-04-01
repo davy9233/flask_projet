@@ -9,7 +9,7 @@
 <body>
     <h1> Voici la liste des abonnes </h1>
     {% for row in rows %}
-    <p> Nom : {{row["nom"]}} prenom : {{row["prenom"]}}</p>
+    <p> Nom : {{row["nom"]}} prenom : {{row["prenom"]}} pseudo : {{row["pseudo"]}}</p>
     {% endfor %}
     <p> {{nombre}}</p>
     <a class="bas" href="{{ url_for('accueil') }}"> Retourner à la page d'accueil </a>

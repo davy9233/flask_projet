@@ -14,8 +14,10 @@
         <p class="rouge_titre">que puis je pour toi ?</p>
     </center>
 
-    <div class="">
-        <h1>Veuillez entrer votre nom</h1>
+    <div>
+        <h1>
+            <center>Veuillez entrer votre nom</h1>
+        </center>
         <form action="{{url_for('text_box')}}" method="POST">
             <label for="fnom">Nom:</label>
             <input type="text" id="fnom" name="nom"><br>
@@ -35,9 +37,9 @@
 
 
     <br>
-    <a class="bas" href="{{ url_for('upload_file') }}"> souhaitez vous enregister votre fichier dans notre base</a>
+    <a href="{{ url_for('upload_file') }}"> souhaitez vous enregister votre fichier dans notre base</a>
     <br>
-    <center><a class="bas droite" href="{{ url_for('perdu') }}"> Cliquer sur ce lien si tu es curieux(se)</a></center>
+    <center><a href="{{ url_for('perdu') }}"> Cliquer sur ce lien si tu es curieux(se)</a></center>
     <br>
     <a href="{{ url_for('liste') }}"> Cliquer pour connaitre la liste des abonnes</a>
 </body>

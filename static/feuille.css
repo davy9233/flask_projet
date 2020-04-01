@@ -13,23 +13,29 @@ h1 {
     color: red;
 }
 
-.bas {
-    position: relative;
-    ;
-    top: 200px;
-}
-
-.droite {
-    left: 10px;
-}
-
-form {
-    background-color: #FAFAFA;
-    padding: 10px;
-    width: auto;
+button[type=submit],
+input[type=file],
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: rgba(76, 152, 175, 0.342);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 label {
-    margin-top: 10px;
+    margin-top: 20px;
     display: block;
+}
+
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
 }

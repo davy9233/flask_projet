@@ -60,13 +60,20 @@ def upload_files():
         f.save('./sauvegarde/' + nom_fichier)
         result_f='fichier telecharge'
         data =  pd.read_csv('./sauvegarde/'+ nom_fichier, sep=',')
+        data5=data.head(5)
         stats_f = data.describe()
-    return render_template('upload.html', msg_f=result_f,nom_f=nom_fichier,statis=stats_f,lend=len(stats_f))
+    return render_template('upload.html', msg_f=result_f,nom_f=nom_fichier,tables=[stats_f.to_html(classes='statist'),data5.to_html(classes='data')],titles = ['na', 'statistiques','les 5 premieres lignes du jeu de donnees'])
 
 
 @app.route('/perdu')
 def perdu():
     return render_template('perdu.html', titre="Bienvenue !")
+
+@app.route('/', methods=['POST'])
+def login():
+    text = request.form['username']
+    processed_text = text.upper()
+    return render_template("bienvenue.html", message=processed_text)
 
 @app.route('/liste')
 def liste():

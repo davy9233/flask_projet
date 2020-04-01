@@ -8,21 +8,26 @@
 </head>
 
 <body>
-    <form action="{{url_for('upload_files')}}" method="POST" enctype="multipart/form-data">
-        <input type="file" name="file" />
-        <input type="submit" />
-    </form>
-    <p>{{msg_f}}</p>
-    <br>
-    <p>statistiques du fichier {{nom_f}}</p>
-
-    <table border=1>
-
-
-        <li>{{statis}}</li>
+    <div>
+        <form action="{{url_for('upload_files')}}" method="POST" enctype="multipart/form-data">
+            <p>
+                <center>statistiques de votre fichier</center>
+            </p>
+            <input type="file" name="file" />
+            <input type="submit" />
+        </form>
+    </div>
 
 
-    </table>
+
+    <div>
+        {% for table in tables %}
+        <h2>{{titles[loop.index]}}</h2>
+        {{ table|safe }} {% endfor %}
+    </div>
+
+
+
     <br>
 
 
